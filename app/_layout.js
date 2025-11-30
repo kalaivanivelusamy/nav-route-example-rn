@@ -9,11 +9,17 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={
           {
             headerTitle: "Home",
-            headerRight: ContactButton
+            headerRight: ContactButton,
           }
         }/>
         <Stack.Screen name="about" />
         <Stack.Screen name="contact" />
+        <Stack.Screen name="blog/index" options={
+          {
+            headerTitle: "All Blog posts"
+          }
+        } />
+
       </Stack>
   );
 }

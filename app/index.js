@@ -1,13 +1,20 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 
 
 export default function Page() {
   return (
      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text style ={{fontSize: 20, marginBottom: 20}}>Welcome to the our App!</Text>
-      <Link href={"/about"}>Go to About</Link>
-      <Link href={"/contact"}>Go to Contact</Link>
+      <Link href={"/about"} asChild>
+       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5,marginBottom: 10}}> About</Pressable>
+      </Link>
+      <Link href={"/contact"} asChild>
+       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5}}> Contact</Pressable>
+      </Link>
+      <Link href={"/blog"} asChild> 
+       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5, marginTop: 10}}> Blog Page</Pressable>
+      </Link>
       </View>
   );
 }
