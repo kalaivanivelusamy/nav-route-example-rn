@@ -5,15 +5,17 @@ import ContactButton from './contactBtn';
 export default function RootLayout() {
 
   return (
-      <Stack>
-        <Stack.Screen name="index" options={
+      <Stack screenOptions={
           {
-            headerTitle: "Home",
             headerRight: ContactButton,
+            headerStyle: { backgroundColor: 'pink'  },
+            headerTintColor: '#000',
+            headerTitleStyle: { fontWeight: 'bold' },
           }
-        }/>
+        }>
+        <Stack.Screen name="index" />
         <Stack.Screen name="about" />
-        <Stack.Screen name="contact" />
+        <Stack.Screen name="contact" options={{headerTitle: "Contact",presentation: "modal"}}/>
         <Stack.Screen name="blog/index" options={
           {
             headerTitle: "All Blog posts"

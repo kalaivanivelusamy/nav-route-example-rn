@@ -7,13 +7,19 @@ export default function Page() {
      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text style ={{fontSize: 20, marginBottom: 20}}>Welcome to the our App!</Text>
       <Link href={"/about"} asChild>
-       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5,marginBottom: 10}}> About</Pressable>
+       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5,marginBottom: 10}}> 
+            <Text>About</Text>
+       </Pressable>
       </Link>
       <Link href={"/contact"} asChild>
-       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5}}> Contact</Pressable>
+       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5}}> 
+            <Text>Contact</Text>
+       </Pressable>
       </Link>
       <Link href={"/blog"} asChild> 
-       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5, marginTop: 10}}> Blog Page</Pressable>
+       <Pressable style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5, marginTop: 10}}> 
+            <Text>Blog Page</Text>
+       </Pressable>
       </Link>
       </View>
   );
