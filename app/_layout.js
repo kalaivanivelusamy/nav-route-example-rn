@@ -21,6 +21,9 @@ export default function RootLayout() {
             headerTitle: "All Blog posts"
           }
         } />
+        {/* hide header for tabs layout*/}
+       <Stack.Screen name="(tabs)" options={{headerShown: false}}/> 
+
 
       </Stack>
   );

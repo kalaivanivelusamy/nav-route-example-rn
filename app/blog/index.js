@@ -19,7 +19,7 @@ export default function Blog() {
         }} > 
         <Text style={{marginBottom: 10,fontSize: 14}}>Blog post 3</Text>
       </Link>
-      <Pressable onPress={() => router.back()} style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5, marginTop: 10}}>
+      <Pressable onPress={() => router.replace("/")} style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5, marginTop: 10}}>
         <Text>Back to Home</Text>
       </Pressable>
         </View>
