@@ -1,4 +1,4 @@
-import { useRouter } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { Pressable, Text, View } from "react-native";
 
 export default function Blog() {
@@ -13,6 +13,12 @@ export default function Blog() {
       <Pressable onPress={() => router.push("/blog/2?author=John")} style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5, marginTop: 10}}>
         <Text>Blog post 2</Text>
       </Pressable>
+      <Link href={{
+        pathname: "/blog/3",
+        params: { author: "Doe" }
+        }} > 
+        <Text style={{marginBottom: 10,fontSize: 14}}>Blog post 3</Text>
+      </Link>
       <Pressable onPress={() => router.back()} style={{padding: 10, backgroundColor: 'lightblue', borderRadius: 5, marginTop: 10}}>
         <Text>Back to Home</Text>
       </Pressable>
